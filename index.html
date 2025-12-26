@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Nós 💖</title>
+  <link rel="stylesheet" href="style.css">
+
+  
+</head>
+
+
+
+
+<body>
+<div class="hearts" id="hearts"></div>
+
+
+<audio id="musica" loop>
+  <source src="audio/musica.weba" type="audio/webm">
+  Seu navegador não suporta áudio.
+</audio>
+
+
+
+  <!-- TELA DE SENHA -->
+<div class="lock" id="lock">
+  <div class="lock-card">
+    <h2>💖 Área Secreta</h2>
+    <p>Somente quem faz parte da nossa história pode entrar</p>
+
+    <input type="password" id="senha" placeholder="Digite a senha">
+    <button id="entrar">Desbloquear 🔓</button>
+
+    <span id="erro">Senha errada 😢</span>
+  </div>
+</div>
+
+
+<div id="site" style="display:none;">
+    <!-- CONTEÚDO PRINCIPAL -->
+  <div class="main">
+    <div class="card">
+      <div class="slideshow">
+        <img src="img/img01.jpg" class="ativo">
+        <img src="img/img02.jpg">
+        <img src="img/img03.jpg">
+        <img src="img/img04.jpg">
+      </div>
+
+
+      <h1>Eu te amo há:</h1>
+      <p id="contador"></p>
+
+      <p class="texto">
+        Cada segundo ao seu lado vale mais que qualquer coisa ✨
+      </p>
+    </div>
+
+    
+    <button class="abrir" onclick="window.location.href='termo/termo.html'">
+        🎮 Jogar Termo
+      </button>
+
+    <button class="abrir" id="abrirCarta">💖 Clique aqui</button>
+  </div>
+
+  <!-- CARTA GIGANTE -->
+  <div class="carta-gigante" id="carta">
+  <div class="conteudo-carta">
+    <h2>Minha cartinha pra você 💌</h2>
+    <p>
+      Eu tentei contar todas as formas de te amar,<br>
+      mas desisti quando percebi<br>
+      que algumas coisas não cabem em números.<br><br>
+
+      Te amar é perceber que o mundo continua barulhento,<br>
+      mas que o meu silêncio preferido<br>
+      é o que existe quando você está por perto.<br><br>
+
+      E talvez seja por isso que,<br>
+      quando penso no futuro,<br>
+      não penso em medo —<br>
+      penso em nós.<br><br>
+
+      Amar você é lembrar<br>
+      que até os dias comuns<br>
+      podem se tornar especiais.<br><br>
+
+      É rir de coisas bobas,<br>
+      dividir o cansaço,<br>
+      escolher ficar mesmo quando ir seria mais fácil.<br><br>
+
+      É imaginar um “sim” dito sem pressa,<br>
+      uma vida construída aos poucos,<br>
+      com amor, parceria e sonhos compartilhados.<br><br>
+
+      É sonhar com uma casa cheia,<br>
+      com risadas, histórias, bagunça,<br>
+      e memórias que vamos colecionar juntos.<br><br>
+
+      É planejar viagens sem mapa certo,<br>
+      perder horários, se perder no mundo,<br>
+      e sempre se encontrar um no outro.<br><br>
+
+      Você é o detalhe que muda meu dia,<br>
+      o pensamento que aparece sem avisar,<br>
+      o sorriso que surge só de lembrar.<br><br>
+
+      Se eu tivesse que explicar o amor,<br>
+      não falaria de promessas grandiosas,<br>
+      falaria de você.<br><br>
+
+      Falaria do jeito que você cuida,<br>
+      do jeito que me faz sentir completo,<br>
+      do jeito que transforma tudo em mais leve.<br><br>
+
+      Eu te amo não só nos dias bons,<br>
+      mas principalmente nos dias difíceis,<br>
+      quando o mundo pesa<br>
+      e tudo o que eu quero<br>
+      é estar ao seu lado.<br><br>
+
+      Hoje, no seu aniversário,<br>
+      quero que saiba que você é meu presente todos os dias:<br>
+      a certeza mais bonita que já tive,<br>
+      a minha escolha mais feliz,<br>
+      a minha casa, meu porto, meu riso.<br><br>
+
+      Que a sua vida seja cheia de alegrias,<br>
+      que os seus sonhos se realizem,<br>
+      e que eu esteja sempre ao seu lado<br>
+      para celebrar cada momento, grande ou pequeno.<br><br>
+
+      Hoje, amanhã, e em todas as versões do nosso futuro,<br>
+      eu escolho você.<br><br>
+
+      Pra sempre,<br>
+      com todo o meu coração. ❤️
+    </p>
+
+    <button id="fechar">Voltar 💕</button>
+  </div>
+</div>
+
+
+</div>
+
+
+
+  
+
+  <script src="script.js" defer></script>
+
+</body>
+</html>

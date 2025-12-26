@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg,
+    #ff9a9e,
+    #fad0c4,
+    #fad0c4,
+    #ffdde1
+  );
+  background-size: 300% 300%;
+  animation: gradientMove 12s ease infinite;
+}
+
+
+/* MAIN */
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  padding: 32px;
+  border-radius: 30px;
+  width: 320px;
+  box-shadow:
+    0 15px 40px rgba(255, 105, 180, 0.35),
+    inset 0 0 20px rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+
+.foto {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 20px;
+  color: #ff4f87;
+  font-weight: 600;
+}
+
+
+#contador {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.texto {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+/* BOTÃO */
+.abrir {
+  margin-top: 30px;
+  padding: 12px 25px;
+  border-radius: 30px;
+  border: none;
+  background: #1db954;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 0 20px #1db954aa;
+}
+
+/* CARTA GIGANTE */
+.carta-gigante {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #ff5c8a, #ffb6c1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s;
+  z-index: 9999; /* ⬅️ aumentar bastante */
+}
+
+
+.carta-gigante.ativa {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.carta-gigante.ativa .conteudo-carta {
+  animation: zoom 0.6s ease forwards;
+}
+
+@keyframes zoom {
+  from { transform: scale(0.7); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+
+
+.conteudo-carta {
+  position: relative;
+  z-index: 10000;
+  background: white;
+  color: #333;
+  padding: 35px;
+  border-radius: 30px;
+  max-width: 600px;
+  max-height: 80vh; /* ⬅️ limite de altura */
+  overflow-y: auto; /* ⬅️ ativa scroll vertical se o conteúdo passar */
+  text-align: center;
+  animation: zoom 0.6s ease;
+}
+
+
+.conteudo-carta h2 {
+  color: #ff4f87;
+  margin-bottom: 20px;
+}
+
+.conteudo-carta p {
+  line-height: 1.6;
+}
+
+.conteudo-carta button {
+  margin-top: 25px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: #ff4f87;
+  color: white;
+  cursor: pointer;
+}
+
+/* ANIMAÇÃO */
+@keyframes zoom {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+.slideshow {
+  position: relative; /* 🔴 ISSO AQUI */
+  height: 260px;
+  border-radius: 25px;
+  overflow: hidden;
+  margin-bottom: 18px;
+  box-shadow: 0 10px 25px rgba(255, 105, 180, 0.4);
+}
+
+
+.slideshow img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+
+.slideshow img.ativo {
+  opacity: 1;
+}
+
+
+.lock {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top, #1db95433, #000);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.lock-card {
+  background: #121212;
+  padding: 30px;
+  border-radius: 25px;
+  width: 300px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 0 40px rgba(0,0,0,0.7);
+}
+
+.lock-card h2 {
+  color: #1db954;
+  margin-bottom: 10px;
+}
+
+.lock-card p {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.lock-card input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.lock-card button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 20px;
+  border: none;
+  background: #1db954;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#erro {
+  display: none;
+  color: #ff5c8a;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+
+.hearts {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.heart {
+  position: absolute;
+  top: -10%;
+  font-size: 20px;
+  opacity: 0.35;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(120vh);
+  }
+}
+
+
+
+.main,
+.card {
+  position: relative;
+  z-index: 2;
+}
