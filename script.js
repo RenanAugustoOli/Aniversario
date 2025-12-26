@@ -48,7 +48,7 @@ setInterval(() => {
 // ======================
 // 🔐 SENHA + MÚSICA
 // ======================
-const senhaCorreta = "a"; // 🔴 MUDE AQUI
+const senhaCorreta = "Te amo muito minha princesa";
 
 const entrar = document.getElementById("entrar");
 const senhaInput = document.getElementById("senha");
@@ -124,3 +124,4 @@ for (let i = 0; i < 25; i++) {
 
   heartsContainer.appendChild(heart);
 }
+
